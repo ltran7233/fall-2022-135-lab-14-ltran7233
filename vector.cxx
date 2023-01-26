@@ -1,5 +1,4 @@
 #include <iostream>
-#include "vector.h"
 
 template <class V>
 MyVector<V>::MyVector(){
