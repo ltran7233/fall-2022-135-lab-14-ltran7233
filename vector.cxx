@@ -3,7 +3,7 @@
 
 template <class V>
 MyVector<V>::MyVector(){
-	arr = new T[5];
+	arr = new V[5];
 	vsize = 0;
 	vcapacity = 5;
 }
@@ -29,10 +29,10 @@ bool MyVector<V>::empty(){
 }
 
 template <class V>
-void MyVector<V>::push_back(T item){
+void MyVector<V>::push_back(V item){
 	if (vsize==vcapacity)
 	{
-		T temp = new T[vsize+1];
+		V *temp = new V[vsize+1];
 		vcapacity++;
 		for (int i=0; i<vsize; i++)
 		{
@@ -54,7 +54,7 @@ void MyVector<V>::push_back(T item){
 
 template <class V>
 void MyVector<V>::pop_back(int n){
-	T temp = new T[vsize-n];
+	V *temp = new V[vsize-n];
 	for (int i=0; i<vsize-n; i++)
 	{
 		temp[i] = arr[i];
@@ -68,7 +68,7 @@ void MyVector<V>::pop_back(int n){
 
 template <class V>
 void MyVector<V>::pop_back(){
-	T temp = new T[vsize-1];
+	V *temp = new V[vsize-1];
 	for (int i=0; i<vsize-1; i++)
 	{
 		temp[i] = arr[i];
@@ -82,7 +82,7 @@ void MyVector<V>::pop_back(){
 
 template <class V>
 void MyVector<V>::clear(){
-	arr = new T[5];
+	arr = new V[5];
 	vsize = 0;
 	vcapacity = 5;
 }
